@@ -1,0 +1,14 @@
+[user]
+	email = francocatena@gmail.com
+	name = Franco Catena
+[color]
+	ui = auto
+[diff]
+	tool = vimdiff
+[alias]
+  st = status
+  ci = commit
+  co = checkout
+  di = diff
+  l = "!. ~/.githelpers && pretty_git_log"
+  la = !git l --all
