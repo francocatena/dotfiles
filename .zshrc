@@ -39,4 +39,6 @@ plugins=(git bundler gem fcatena)
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
+# Rbenv path overide
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
