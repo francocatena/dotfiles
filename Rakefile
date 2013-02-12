@@ -8,7 +8,7 @@ task :install do
 
   replace_all = false
   
-  files = Dir['.*'] - %w[. .. .gitmodules]
+  files = Dir['.*'] - %w[. .. .git .gitmodules]
 
   files << '.oh-my-zsh/custom/plugins/fcatena'
 
