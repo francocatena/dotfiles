@@ -33,7 +33,7 @@ private
 def copy_files
   replace_all = false
   
-  files = Dir['.*'] - %w[. .. .git .gitmodules .oh-my-zsh]
+  files = Dir['.*'] - %w[. .. .git .gitignore .gitmodules .oh-my-zsh]
 
   files << '.oh-my-zsh/custom/plugins/fcatena'
 
