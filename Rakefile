@@ -13,7 +13,7 @@ task :install do
   files << '.oh-my-zsh/custom/plugins/fcatena'
 
   files.each do |file|
-    %x{mkdir -p "$HOME/#{File.dirname(file}"} if file =~ /\//
+    %x{mkdir -p "$HOME/#{File.dirname(file)}"} if file =~ /\//
 
     if File.exist?(File.join(ENV['HOME'], file.sub(/\.erb$/, '')))
       if File.identical? file, File.join(ENV['HOME'], file.sub(/\.erb$/, ''))
@@ -50,7 +50,7 @@ end
 def link_file(file)
   if file =~ /.erb$/
     puts "generating ~/#{file.sub(/\.erb$/, '')}"
-    File.open(File.join(ENV['HOME'], file.sub(/\.erb$/, ''), 'w') do |new_file|
+    File.open(File.join(ENV['HOME'], file.sub(/\.erb$/, ''), 'w')) do |new_file|
       new_file.write ERB.new(File.read(file)).result(binding)
     end
   elsif file =~ /\.zshrc$/ # copy zshrc instead of link
