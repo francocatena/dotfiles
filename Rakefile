@@ -14,13 +14,15 @@ task :update do
   puts %x{git pull}
   puts %x{git submodule foreach git pull}
 
-  copy_files
-
-  git_repos = ['.rbenv', '.rbenv/plugins/ruby-build/', '.oh-my-zsh']
+  git_repos = ['.rbenv', '.rbenv/plugins/ruby-build', '.oh-my-zsh']
 
   git_repos.each do |repo|
-    puts %x{cd $HOME/#{repo}; git pull; cd -} if File.directory?(File.join(ENV['HOME'], repo))
+    puts %x{cd $HOME/#{repo}; git pull; cd -} if File.directory?(File.join(ENV['HOME'], repo, '.git'))
   end
+
+  puts %x{curl -Sso ~/.dotfiles/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim}
+
+  copy_files
 end
 
 private
