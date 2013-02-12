@@ -1,10 +1,6 @@
 [user]
   email = francocatena@gmail.com
   name = Franco Catena
-[color]
-  ui = auto
-[diff]
-  tool = vimdiff
 [alias]
   st = status
   ci = commit
@@ -12,3 +8,9 @@
   di = diff
   l = "!. ~/.githelpers && pretty_git_log"
   la = !git l --all
+[color]
+  ui = auto
+[diff]
+  tool = vimdiff
+[format]
+  pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset

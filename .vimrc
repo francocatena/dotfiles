@@ -45,3 +45,12 @@ let mapleader=','
 " Key maps
 nnoremap <C-l> :set number!<CR>
 nnoremap <Leader>s :w<CR>
+
+" Leader shortcuts for Rails commands
+map <Leader>m :Rmodel 
+map <Leader>c :Rcontroller 
+map <Leader>v :Rview 
+map <Leader>u :Runittest 
+map <Leader>f :Rfunctionaltest 
+map <Leader>i :Rintegrationtest 
+map <Leader>r :Rake
