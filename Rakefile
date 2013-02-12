@@ -5,6 +5,8 @@ desc "install the dot files into user's home directory"
 task :install do
   install_oh_my_zsh
   switch_to_zsh
+  
+  puts %x{git submodule foreach git checkout master}
 
   copy_files
 end
@@ -12,6 +14,7 @@ end
 desc 'Update all the _updatable_ things =)'
 task :update do
   puts %x{git pull}
+  puts %x{git submodule update}
   puts %x{git submodule foreach git pull}
 
   git_repos = ['.rbenv', '.rbenv/plugins/ruby-build', '.oh-my-zsh']
