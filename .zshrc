@@ -12,6 +12,7 @@ alias zshconfig="vim ~/.zshrc"
 # alias ohmyzsh="vim ~/.oh-my-zsh"
 # alias vim="stty stop '' -ixoff; vim"
 alias vimrc="vim ~/.vimrc"
+alias dotfiles_update="cd ~/.dotfiles; rake update; cd -"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"

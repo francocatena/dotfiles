@@ -6,6 +6,26 @@ task :install do
   install_oh_my_zsh
   switch_to_zsh
 
+  copy_files
+end
+
+desc 'Update all the _updatable_ things =)'
+task :update do
+  puts %x{git pull}
+  puts %x{git submodule foreach git pull}
+
+  copy_files
+
+  git_repos = ['.rbenv', '.rbenv/plugins/ruby-build/', '.oh-my-zsh']
+
+  git_repos.each do |repo|
+    puts %x{cd $HOME/#{repo}; git pull; cd -} if File.directory?(File.join(ENV['HOME'], repo))
+  end
+end
+
+private
+
+def copy_files
   replace_all = false
   
   files = Dir['.*'] - %w[. .. .git .gitmodules .oh-my-zsh]
@@ -13,7 +33,7 @@ task :install do
   files << '.oh-my-zsh/custom/plugins/fcatena'
 
   files.each do |file|
-    %x{mkdir -p "$HOME/#{File.dirname(file)}"} if file =~ /\//
+    puts %x{mkdir -p "$HOME/#{File.dirname(file)}"} if file =~ /\//
 
     if File.exist?(File.join(ENV['HOME'], file.sub(/\.erb$/, '')))
       if File.identical? file, File.join(ENV['HOME'], file.sub(/\.erb$/, ''))
@@ -42,7 +62,7 @@ task :install do
 end
 
 def replace_file(file)
-  %x{rm -rf "$HOME/#{file.sub(/\.erb$/, '')}"}
+  puts %x{rm -rf "$HOME/#{file.sub(/\.erb$/, '')}"}
 
   link_file(file)
 end
@@ -55,10 +75,10 @@ def link_file(file)
     end
   elsif file =~ /\.zshrc$/ # copy zshrc instead of link
     puts "copying ~/#{file}"
-    %x{cp "$PWD/#{file}" "$HOME/#{file}"}
+    puts %x{cp "$PWD/#{file}" "$HOME/#{file}"}
   else
     puts "linking ~/#{file}"
-    %x{ln -s "$PWD/#{file}" "$HOME/#{file}"}
+    puts %x{ln -s "$PWD/#{file}" "$HOME/#{file}"}
   end
 end
 
@@ -70,7 +90,7 @@ def switch_to_zsh
     case $stdin.gets.chomp
     when 'y'
       puts 'switching to zsh'
-      %x{chsh -s `which zsh`}
+      puts %x{chsh -s `which zsh`}
     when 'q'
       exit
     else
@@ -88,7 +108,7 @@ def install_oh_my_zsh
     when 'y'
       puts 'installing oh-my-zsh'
 
-      %x{git clone https://github.com/robbyrussell/oh-my-zsh.git "$HOME/.oh-my-zsh"}
+      puts %x{git clone https://github.com/robbyrussell/oh-my-zsh.git "$HOME/.oh-my-zsh"}
     when 'q'
       exit
     else
