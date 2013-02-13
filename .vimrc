@@ -16,6 +16,10 @@ set showmatch
 set history=10000
 set pastetoggle=<C-p>
 
+" Maintain undo history between sessions
+set undofile
+set undodir=~/.vim/undodir
+
 set nonumber
 set numberwidth=5
 highlight LineNr term=bold cterm=bold ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
