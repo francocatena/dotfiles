@@ -49,6 +49,15 @@ let mapleader=','
 nnoremap <C-l> :set number!<CR>
 nnoremap <Leader>s :w<CR>
 
+nnoremap <CR> :nohlsearch<CR>
+nnoremap <Leader><CR> o<Esc>
+
+" Smart way to move between windows
+nnoremap <C-j> <C-W>j
+nnoremap <C-k> <C-W>k
+nnoremap <C-h> <C-W>h
+nnoremap <C-l> <C-W>l
+
 " Leader shortcuts for Rails commands
 map <Leader>m :Rmodel 
 map <Leader>c :Rcontroller 
