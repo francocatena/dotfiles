@@ -5,6 +5,12 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+set background=dark
+colorscheme solarized
+set t_Co=256
+set number
+set cursorline
+
 set showtabline=2
 set statusline=2
 set tabstop=2
@@ -19,13 +25,6 @@ set pastetoggle=<C-p>
 " Maintain undo history between sessions
 set undofile
 set undodir=~/.vim/undodir
-
-set nonumber
-set numberwidth=5
-highlight LineNr term=bold cterm=bold ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
-
-set cursorline
-highlight CursorLine cterm=bold ctermbg=DarkGrey
 
 set ignorecase smartcase
 
