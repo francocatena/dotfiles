@@ -6,6 +6,7 @@
   ci = commit
   co = checkout
   di = diff
+  po = push origin
   l = "!. ~/.githelpers && pretty_git_log"
   la = !git l --all
 [color]
