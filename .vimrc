@@ -48,8 +48,11 @@ let mapleader=','
 " Key maps
 nnoremap <C-l> :set number!<CR>
 nnoremap <Leader>s :w<CR>
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>q :q<CR>
+nnoremap <Leader>x :x<CR>
 
-nnoremap <CR> :nohlsearch<CR>
+nnoremap <Leader><Leader> :nohlsearch<CR>
 nnoremap <Leader><CR> o<Esc>
 
 " Smart way to move between windows
