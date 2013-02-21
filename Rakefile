@@ -15,7 +15,7 @@ desc 'Update all the _updatable_ things =)'
 task :update do
   puts %x{git pull}
   puts %x{git submodule update}
-  puts %x{git submodule foreach git pull}
+  puts %x{git submodule foreach "git pull origin master"}
 
   git_repos = ['.rbenv', '.rbenv/plugins/ruby-build', '.oh-my-zsh']
 
