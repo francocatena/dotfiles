@@ -3,8 +3,17 @@ set nocompatible
 execute pathogen#infect()
 execute pathogen#helptags()
 
-syntax on
-filetype plugin indent on
+if has('syntax')
+  syntax on
+endif
+
+if has('autocmd')
+  filetype plugin indent on
+
+  " Rails custom autocommands
+  autocmd User Rails Rnavcommand fabricator test/fabricators -suffix=_fabricator.rb -default=model()
+  autocmd User Rails Rnavcommand uploader app/uploaders -suffix=_uploader.rb -default=model()
+endif
 
 set background=dark
 colorscheme solarized
@@ -14,9 +23,13 @@ set cursorline
 
 set showtabline=2
 set statusline=2
+
+" Tab behavior
 set tabstop=2
 set shiftwidth=2
+set softtabstop=2
 set expandtab
+
 set hlsearch
 set incsearch
 set showmatch
@@ -39,10 +52,6 @@ map <Down> <Nop>
 
 " Status line
 set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
-
-" Custom autocommands
-autocmd User Rails Rnavcommand fabricator test/fabricators -suffix=_fabricator.rb -default=model()
-autocmd User Rails Rnavcommand uploader app/uploaders -suffix=_uploader.rb -default=model()
 
 let mapleader=','
 
@@ -70,3 +79,7 @@ map <Leader>u :Runittest
 map <Leader>f :Rfunctionaltest 
 map <Leader>i :Rintegrationtest 
 map <Leader>r :Rake
+
+" Invisibles characters setup
+nmap <Leader>l :set list!<CR>
+set listchars=tab:▸\ ,eol:¬
