@@ -15,6 +15,12 @@ if has('autocmd')
   autocmd User Rails Rnavcommand uploader app/uploaders -suffix=_uploader.rb -default=model()
 endif
 
+if has('multi_byte')
+  set encoding=utf-8
+  setglobal fileencoding=utf-8
+  set fileencodings=ucs-bom,utf-8,latin1
+endif
+
 set background=dark
 colorscheme solarized
 set t_Co=256
