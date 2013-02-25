@@ -77,14 +77,23 @@ nnoremap <C-k> <C-W>k
 nnoremap <C-h> <C-W>h
 nnoremap <C-l> <C-W>l
 
-" Leader shortcuts for Rails commands
-map <Leader>m :Rmodel 
-map <Leader>c :Rcontroller 
-map <Leader>v :Rview 
-map <Leader>u :Runittest 
-map <Leader>f :Rfunctionaltest 
-map <Leader>i :Rintegrationtest 
-map <Leader>r :Rake
+" Leader shortcuts for Vim Rails commands
+nnoremap <Leader>m :Rmodel 
+nnoremap <Leader>c :Rcontroller 
+nnoremap <Leader>v :Rview 
+nnoremap <Leader>u :Runittest 
+nnoremap <Leader>f :Rfunctionaltest 
+nnoremap <Leader>i :Rintegrationtest 
+nnoremap <Leader>r :Rake
+nnoremap <Leader>a :A<CR>
+
+" Leader shortcuts for Vim Fugitive
+nnoremap <Leader>gs :Gstatus<CR>
+nnoremap <Leader>gd :Gdiff<CR>
+nnoremap <Leader>gc :Gcommit<CR>
+nnoremap <Leader>gb :Gblame<CR>
+nnoremap <Leader>gl :Glog<CR>
+nnoremap <Leader>gp :Git push<CR>
 
 " Invisibles characters setup
 nmap <Leader>l :set list!<CR>
