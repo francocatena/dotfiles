@@ -81,10 +81,12 @@ nnoremap <C-l> <C-W>l
 nnoremap <Leader>m :Rmodel 
 nnoremap <Leader>c :Rcontroller 
 nnoremap <Leader>v :Rview 
+nnoremap <Leader>h :Rhelper 
 nnoremap <Leader>u :Runittest 
 nnoremap <Leader>f :Rfunctionaltest 
 nnoremap <Leader>i :Rintegrationtest 
 nnoremap <Leader>r :Rake
+nnoremap <Leader>t :Rake<CR>
 nnoremap <Leader>a :A<CR>
 
 " Leader shortcuts for Vim Fugitive
