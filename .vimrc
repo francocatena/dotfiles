@@ -21,6 +21,10 @@ if has('multi_byte')
   set fileencodings=ucs-bom,utf-8,latin1
 endif
 
+if has('mouse')
+  set mouse=nv
+endif
+
 set background=dark
 colorscheme solarized
 set t_Co=256
@@ -62,7 +66,7 @@ set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 let mapleader=','
 
 " Key maps
-nnoremap <C-l> :set number!<CR>
+nnoremap <Leader>n :set number!<CR>
 nnoremap <Leader>s :w<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
