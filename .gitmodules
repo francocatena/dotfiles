@@ -55,3 +55,6 @@
 [submodule ".vim/bundle/checksyntax_vim"]
 	path = .vim/bundle/checksyntax_vim
 	url = https://github.com/tomtom/checksyntax_vim.git
+[submodule ".vim/bundle/vim-ruby"]
+	path = .vim/bundle/vim-ruby
+	url = https://github.com/vim-ruby/vim-ruby.git
