@@ -13,6 +13,8 @@ alias zshconfig="vim ~/.zshrc"
 # alias vim="stty stop '' -ixoff; vim"
 alias vimrc="vim ~/.vimrc"
 alias dotfiles_update="cd ~/.dotfiles; rake update; cd -"
+alias ccopy="xclip -sel clip"
+alias cpaste="xclip -sel clip -o"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
