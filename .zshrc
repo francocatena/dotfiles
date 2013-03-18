@@ -15,6 +15,8 @@ alias vimrc="vim ~/.vimrc"
 alias dotfiles_update="cd ~/.dotfiles; rake update; cd -"
 alias ccopy="xclip -sel clip"
 alias cpaste="xclip -sel clip -o"
+alias sq="screen -q"
+alias sr="screen -r"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
