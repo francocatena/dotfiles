@@ -1,3 +1,2 @@
-*.swp
 .vim/undodir/*
 !.vim/undodir/.gitkeep
