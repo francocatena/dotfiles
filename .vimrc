@@ -27,9 +27,6 @@ set t_Co=256
 set number
 set cursorline
 
-set showtabline=2
-set statusline=2
-
 " Tab behavior
 set tabstop=2
 set shiftwidth=2
@@ -57,7 +54,9 @@ map <Up> <Nop>
 map <Down> <Nop>
 
 " Status line
-set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
+set showtabline=2
+set laststatus=2
+set statusline=[%n]\ %<%.99f\ %h%w%m%r%{exists('*fugitive#statusline')?fugitive#statusline():''}%y%=%-16(\ %l,%c-%v\ %)%P
 
 let mapleader=','
 
