@@ -9,10 +9,6 @@ endif
 
 if has('autocmd')
   filetype plugin indent on
-
-  " Rails custom autocommands
-  autocmd User Rails Rnavcommand fabricator test/fabricators -suffix=_fabricator.rb -default=model()
-  autocmd User Rails Rnavcommand uploader app/uploaders -suffix=_uploader.rb -default=model()
 endif
 
 if has('multi_byte')
