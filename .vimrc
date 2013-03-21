@@ -21,6 +21,12 @@ if has('mouse')
   set mouse=nv
 endif
 
+if has('spell')
+  set spell
+  set spelllang=en_us
+  nnoremap _s :set spell!<CR>
+endif
+
 set background=dark
 colorscheme solarized
 set t_Co=256
