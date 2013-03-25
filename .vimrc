@@ -68,7 +68,6 @@ let mapleader=','
 
 " Key maps
 nnoremap <Leader>n :set number!<CR>
-nnoremap <Leader>s :w<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>x :x<CR>
@@ -90,9 +89,12 @@ nnoremap <Leader>h :Rhelper
 nnoremap <Leader>u :Runittest 
 nnoremap <Leader>f :Rfunctionaltest 
 nnoremap <Leader>i :Rintegrationtest 
+nnoremap <Leader>j :Rjavascript 
+nnoremap <Leader>s :Rstylesheet 
 nnoremap <Leader>r :Rake
 nnoremap <Leader>t :Rake<CR>
-nnoremap <Leader>a :A<CR>
+nnoremap _a :A<CR>
+nnoremap _r :R<CR>
 
 " Leader shortcuts for Vim Fugitive
 nnoremap <Leader>gs :Gstatus<CR>
@@ -100,7 +102,7 @@ nnoremap <Leader>gd :Gdiff<CR>
 nnoremap <Leader>gc :Gcommit<CR>
 nnoremap <Leader>gb :Gblame<CR>
 nnoremap <Leader>gl :Glog<CR>
-nnoremap <Leader>gp :Git push<CR>
+nnoremap <Leader>i :Rintegrationtest 
 
 " Invisibles characters setup
 nmap <Leader>l :set list!<CR>
