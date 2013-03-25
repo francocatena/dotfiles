@@ -32,15 +32,21 @@ colorscheme solarized
 set t_Co=256
 set number
 set cursorline
+
+" Tab-completion in command-line mode
+set wildmode=full
 set wildmenu
 
 set autoread
+
+set nrformats-=octal
 
 " Tab behavior
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
+set shiftround
 
 set hlsearch
 set incsearch
