@@ -32,6 +32,9 @@ colorscheme solarized
 set t_Co=256
 set number
 set cursorline
+set wildmenu
+
+set autoread
 
 " Tab behavior
 set tabstop=2
@@ -46,18 +49,16 @@ set history=10000
 set pastetoggle=<C-p>
 
 " Maintain undo history between sessions
-set undofile
-set undodir=~/.vim/undodir
+if exists('+undofile') && exists('+undodir')
+  set undofile
+  set undodir=~/.vim/undodir
+end
+
+set directory=~/.vim/backup
 
 set ignorecase smartcase
 
 set showcmd
-
-" No arrow keys
-map <Left> <Nop>
-map <Right> <Nop>
-map <Up> <Nop>
-map <Down> <Nop>
 
 " Status line
 set showtabline=2
@@ -65,6 +66,12 @@ set laststatus=2
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%{exists('*fugitive#statusline')?fugitive#statusline():''}%y%=%-16(\ %l,%c-%v\ %)%P
 
 let mapleader=','
+
+" No arrow keys
+map <Left> <Nop>
+map <Right> <Nop>
+map <Up> <Nop>
+map <Down> <Nop>
 
 " Key maps
 nnoremap <Leader>n :set number!<CR>
@@ -107,3 +114,6 @@ nnoremap <Leader>i :Rintegrationtest
 " Invisibles characters setup
 nmap <Leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
+
+" Make Y consistent with C and D.  See :help Y.
+nnoremap Y y$
