@@ -9,6 +9,8 @@ endif
 
 if has('autocmd')
   filetype plugin indent on
+  " Remember last position in file
+  autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
 endif
 
 if has('multi_byte')
