@@ -42,6 +42,7 @@ set expandtab
 set hlsearch
 set incsearch
 set showmatch
+set hidden
 set history=10000
 set pastetoggle=<C-p>
 
