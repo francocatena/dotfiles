@@ -100,6 +100,7 @@ nnoremap <Leader>x :x<CR>
 
 nnoremap <Leader><Leader> :nohlsearch<CR>
 nnoremap <Leader><CR> o<Esc>
+nnoremap <Leader>b <C-^>
 
 " Smart way to move between windows
 nnoremap <C-j> <C-W>j
