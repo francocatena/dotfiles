@@ -76,7 +76,9 @@ set statusline=[%n]\ %<%.99f\ %h%w%m%r%{exists('*fugitive#statusline')?fugitive#
 
 let mapleader=','
 
-set timeoutlen=400
+set timeout
+set timeoutlen=600
+set ttimeoutlen=100
 
 " No arrow keys
 map <Left> <Nop>
