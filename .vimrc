@@ -108,6 +108,10 @@ nnoremap <C-k> <C-W>k
 nnoremap <C-h> <C-W>h
 nnoremap <C-l> <C-W>l
 
+" Resize and restore windows
+nnoremap <C-_> <C-W>_
+nnoremap <C-=> <C-W>=
+
 " Leader shortcuts for Vim Rails commands
 nnoremap <Leader>m :Rmodel 
 nnoremap <Leader>c :Rcontroller 
@@ -137,3 +141,7 @@ set listchars=tab:▸\ ,eol:¬
 
 " Make Y consistent with C and D.  See :help Y.
 nnoremap Y y$
+
+" Navigate through quickfix
+map <F3> :cprev<CR>
+map <F4> :cnext<CR>
