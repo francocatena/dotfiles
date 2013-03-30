@@ -112,6 +112,14 @@ nnoremap <C-l> <C-W>l
 nnoremap <C-_> <C-W>_
 nnoremap <C-=> <C-W>=
 
+" Shortcuts for opening file in same directory as current file
+cnoremap <expr> %%  getcmdtype() == ':' ? escape(expand('%:h'), ' \').'/' : '%%'
+
+nnoremap <Leader>ew :edit %%
+nnoremap <Leader>es :split %%
+nnoremap <Leader>ev :vsplit %%
+nnoremap <Leader>et :tabedit %%
+
 " Leader shortcuts for Vim Rails commands
 nnoremap <Leader>m :Rmodel 
 nnoremap <Leader>c :Rcontroller 
