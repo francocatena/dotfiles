@@ -37,9 +37,10 @@ if has('spell')
   nnoremap _s :set spell!<CR>
 endif
 
+set t_Co=256
 set background=dark
 colorscheme solarized
-set t_Co=256
+
 set number
 set cursorline
 
