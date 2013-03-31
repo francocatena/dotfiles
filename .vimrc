@@ -94,25 +94,26 @@ map <Right> <Nop>
 map <Up> <Nop>
 map <Down> <Nop>
 
-" Key maps
-nnoremap <Leader>n :set number!<CR>
+" Quit, save and _only_ shortcuts
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>x :x<CR>
+nnoremap <Leader>o :only<CR>
 
+" Aesthetic and navigation
+nnoremap <Leader>n :set number!<CR>
 nnoremap <Leader><Leader> :nohlsearch<CR>
 nnoremap <Leader><CR> o<Esc>
 nnoremap <Leader>b <C-^>
 
 " Smart way to move between windows
-nnoremap <C-j> <C-W>j
-nnoremap <C-k> <C-W>k
-nnoremap <C-h> <C-W>h
-nnoremap <C-l> <C-W>l
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
 
-" Resize and restore windows
-nnoremap <C-_> <C-W>_
-nnoremap <C-=> <C-W>=
+" Resize windows
+nnoremap <C-_> <C-w>_
 
 " Shortcuts for opening file in same directory as current file
 cnoremap <expr> %%  getcmdtype() == ':' ? escape(expand('%:h'), ' \').'/' : '%%'
