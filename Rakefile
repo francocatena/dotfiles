@@ -1,6 +1,5 @@
 require 'rake'
 require 'erb'
-require 'fileutils'
 
 desc "install the dot files into user's home directory"
 task :install do
@@ -21,7 +20,7 @@ task :update do
   git_repos = ['.rbenv', '.rbenv/plugins/ruby-build', '.oh-my-zsh']
 
   git_repos.each do |repo|
-    puts %x{cd $HOME/#{repo}; git pull; cd -} if File.directory?(File.join(ENV['HOME'], repo, '.git'))
+    puts %x{cd $HOME/#{repo}; git pull; cd -} if File.directory?(file_in_home(repo, '.git'))
   end
 
   copy_files
@@ -39,8 +38,8 @@ def copy_files
   files.each do |file|
     puts %x{mkdir -p "$HOME/#{File.dirname(file)}"} if file =~ /\//
 
-    if File.exist?(File.join(ENV['HOME'], file.sub(/\.erb$/, '')))
-      if identical? file, File.join(ENV['HOME'], file.sub(/\.erb$/, ''))
+    if File.exist?(file_in_home(file.sub(/\.erb$/, '')))
+      if are_identical? file, file_in_home(file.sub(/\.erb$/, ''))
         puts "identical ~/#{file.sub(/\.erb$/, '')}"
       elsif replace_all
         replace_file(file)
@@ -65,8 +64,16 @@ def copy_files
   end
 end
 
-def identical?(file, another_file)
-  File.identical?(file, another_file) || FileUtils.identical?(file, another_file)
+def file_in_home(*args)
+  File.join(ENV['HOME'], *args)
+end
+
+def are_identical?(file, another_file)
+  File.identical?(file, another_file) || has_same_content?(file, another_file)
+end
+
+def has_same_content?(file, another_file)
+  File.file?(file) && File.file?(another_file) && FileUtils.identical?(file, another_file)
 end
 
 def replace_file(file)
@@ -78,7 +85,7 @@ end
 def link_file(file)
   if file =~ /.erb$/
     puts "generating ~/#{file.sub(/\.erb$/, '')}"
-    File.open(File.join(ENV['HOME'], file.sub(/\.erb$/, ''), 'w')) do |new_file|
+    File.open(file_in_home(file.sub(/\.erb$/, ''), 'w')) do |new_file|
       new_file.write ERB.new(File.read(file)).result(binding)
     end
   elsif file =~ /\.zshrc$/ # copy zshrc instead of link
@@ -108,7 +115,7 @@ def switch_to_zsh
 end
 
 def install_oh_my_zsh
-  if File.exist?(File.join(ENV['HOME'], '.oh-my-zsh'))
+  if File.exist?(file_in_home('.oh-my-zsh'))
     puts 'found ~/.oh-my-zsh'
   else
     print 'install oh-my-zsh? [ynq] '
