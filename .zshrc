@@ -17,6 +17,8 @@ alias ccopy="xclip -sel clip"
 alias cpaste="xclip -sel clip -o"
 alias s="screen"
 alias sr="screen -r"
+alias rs="rails s"
+alias rc="rails c"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"

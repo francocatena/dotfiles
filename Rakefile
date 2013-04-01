@@ -24,8 +24,6 @@ task :update do
     puts %x{cd $HOME/#{repo}; git pull; cd -} if File.directory?(File.join(ENV['HOME'], repo, '.git'))
   end
 
-  puts %x{curl -Sso ~/.dotfiles/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim}
-
   copy_files
 end
 
