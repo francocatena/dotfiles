@@ -1,5 +1,6 @@
 require 'rake'
 require 'erb'
+require 'fileutils'
 
 desc "install the dot files into user's home directory"
 task :install do
@@ -45,7 +46,7 @@ def copy_files
         replace_file(file)
       else
         print "overwrite ~/#{file.sub(/\.erb$/, '')}? [ynaq] "
-        case $stdin.gets.chomp
+        case ask_user_input
         when 'a'
           replace_all = true
 
@@ -62,6 +63,10 @@ def copy_files
       link_file(file)
     end
   end
+end
+
+def ask_user_input
+  $stdin.gets.chomp
 end
 
 def file_in_home(*args)
@@ -102,7 +107,7 @@ def switch_to_zsh
     puts 'using zsh'
   else
     print 'switch to zsh? (recommended) [ynq] '
-    case $stdin.gets.chomp
+    case ask_user_input
     when 'y'
       puts 'switching to zsh'
       puts %x{chsh -s `which zsh`}
@@ -119,7 +124,7 @@ def install_oh_my_zsh
     puts 'found ~/.oh-my-zsh'
   else
     print 'install oh-my-zsh? [ynq] '
-    case $stdin.gets.chomp
+    case ask_user_input
     when 'y'
       puts 'installing oh-my-zsh'
 
