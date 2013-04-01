@@ -1,5 +1,6 @@
 require 'rake'
 require 'erb'
+require 'fileutils'
 
 desc "install the dot files into user's home directory"
 task :install do
@@ -41,7 +42,7 @@ def copy_files
     puts %x{mkdir -p "$HOME/#{File.dirname(file)}"} if file =~ /\//
 
     if File.exist?(File.join(ENV['HOME'], file.sub(/\.erb$/, '')))
-      if File.identical? file, File.join(ENV['HOME'], file.sub(/\.erb$/, ''))
+      if identical? file, File.join(ENV['HOME'], file.sub(/\.erb$/, ''))
         puts "identical ~/#{file.sub(/\.erb$/, '')}"
       elsif replace_all
         replace_file(file)
@@ -64,6 +65,10 @@ def copy_files
       link_file(file)
     end
   end
+end
+
+def identical?(file, another_file)
+  File.identical?(file, another_file) || FileUtils.identical?(file, another_file)
 end
 
 def replace_file(file)
