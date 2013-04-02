@@ -17,6 +17,7 @@ alias ccopy="xclip -sel clip"
 alias cpaste="xclip -sel clip -o"
 alias s="screen"
 alias sr="screen -r"
+alias r="rails"
 alias rs="rails s"
 alias rc="rails c"
 
