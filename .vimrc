@@ -107,6 +107,9 @@ nnoremap <Leader><Leader> :nohlsearch<CR>
 nnoremap <Leader><CR> o<Esc>
 nnoremap <Leader>b <C-^>
 
+" Insert before cursor
+nnoremap _i hi
+
 " Smart way to move between windows
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
