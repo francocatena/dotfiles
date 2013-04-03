@@ -48,7 +48,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Rbenv path overide
 export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+[ ! -f "$HOME/.rbenv/bin/rbenv" ] || eval "$(rbenv init - | grep -v export.PATH)"
 
 # Added slash when changing dirs
 zstyle ':completion:*' special-dirs true
