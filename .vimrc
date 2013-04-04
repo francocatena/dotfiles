@@ -99,6 +99,7 @@ map <Down> <Nop>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>x :x<CR>
+nnoremap <Leader>a :wa<CR>
 nnoremap <Leader>o :only<CR>
 
 " Aesthetic and navigation
