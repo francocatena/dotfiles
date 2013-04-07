@@ -25,6 +25,7 @@ if has('multi_byte')
   set encoding=utf-8
   setglobal fileencoding=utf-8
   set fileencodings=ucs-bom,utf-8,latin1
+  set nobomb
 endif
 
 if has('mouse')
@@ -41,6 +42,7 @@ set t_Co=256
 set background=dark
 colorscheme solarized
 
+set ruler
 set number
 set cursorline
 
@@ -71,6 +73,11 @@ if exists('+undofile') && exists('+undodir')
   set undofile
   set undodir=~/.vim/undodir
 end
+
+if exists('+writebackup')
+  set nobackup
+  set writebackup
+endif
 
 set directory=~/.vim/backup
 
