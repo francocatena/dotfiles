@@ -168,3 +168,6 @@ nnoremap Y y$
 " Navigate through quickfix
 map <F3> :cprev<CR>
 map <F4> :cnext<CR>
+
+" Toggle tmux status bar
+nnoremap _ts :silent !tmux set status<CR>
