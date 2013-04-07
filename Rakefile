@@ -1,6 +1,5 @@
 require 'rake'
 require 'erb'
-require 'fileutils'
 
 desc "install the dot files into user's home directory"
 task :install do
@@ -40,7 +39,7 @@ def copy_files
     puts %x{mkdir -p "$HOME/#{File.dirname(file)}"} if file =~ /\//
 
     if File.exist?(file_in_home(file.sub(/\.erb$/, '')))
-      if are_identical? file, file_in_home(file.sub(/\.erb$/, ''))
+      if File.identical? file, file_in_home(file.sub(/\.erb$/, ''))
         puts "identical ~/#{file.sub(/\.erb$/, '')}"
       elsif replace_all
         replace_file(file)
@@ -73,14 +72,6 @@ def file_in_home(*args)
   File.join(ENV['HOME'], *args)
 end
 
-def are_identical?(file, another_file)
-  File.identical?(file, another_file) || has_same_content?(file, another_file)
-end
-
-def has_same_content?(file, another_file)
-  File.file?(file) && File.file?(another_file) && FileUtils.identical?(file, another_file)
-end
-
 def replace_file(file)
   puts %x{rm -rf "$HOME/#{file.sub(/\.erb$/, '')}"}
 
@@ -93,9 +84,6 @@ def link_file(file)
     File.open(file_in_home(file.sub(/\.erb$/, ''), 'w')) do |new_file|
       new_file.write ERB.new(File.read(file)).result(binding)
     end
-  elsif file =~ /\.zshrc$/ # copy zshrc instead of link
-    puts "copying ~/#{file}"
-    puts %x{cp "$PWD/#{file}" "$HOME/#{file}"}
   else
     puts "linking ~/#{file}"
     puts %x{ln -s "$PWD/#{file}" "$HOME/#{file}"}
