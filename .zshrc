@@ -7,10 +7,8 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="philips"
 
-# Example aliases
+# Aliases
 alias zshconfig="vim ~/.zshrc"
-# alias ohmyzsh="vim ~/.oh-my-zsh"
-# alias vim="stty stop '' -ixoff; vim"
 alias vimrc="vim ~/.vimrc"
 alias dotfiles_update="cd ~/.dotfiles; rake update; cd -"
 alias ccopy="xclip -sel clip"
@@ -21,12 +19,13 @@ alias r="rails"
 alias rs="rails s"
 alias rc="rails c"
 alias t="TERM=screen-256color-bce tmux"
+alias ta="t attach"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
 # Comment this out to disable bi-weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment to change how many often would you like to wait before auto-updates occur? (in days)
 # export UPDATE_ZSH_DAYS=13
