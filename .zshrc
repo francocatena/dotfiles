@@ -20,6 +20,7 @@ alias sr="screen -r"
 alias r="rails"
 alias rs="rails s"
 alias rc="rails c"
+alias t="TERM=screen-256color-bce tmux"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
