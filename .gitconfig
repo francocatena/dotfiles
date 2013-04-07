@@ -8,8 +8,7 @@
   di = diff
   po = push origin
   aa = add --all
-  l = "!. ~/.githelpers && pretty_git_log"
-  la = !git l --all
+  l = log --oneline --graph --decorate
 [color]
   ui = auto
 [diff]
