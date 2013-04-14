@@ -39,10 +39,13 @@ DISABLE_AUTO_UPDATE="true"
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 COMPLETION_WAITING_DOTS="true"
 
+# Automatically start tmux
+ZSH_TMUX_AUTOSTART="true"
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(bundler gem git screen fcatena)
+plugins=(bundler gem git tmux fcatena)
 
 source $ZSH/oh-my-zsh.sh
 
