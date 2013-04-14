@@ -11,9 +11,11 @@
   l = log --oneline --graph --decorate
 [color]
   ui = auto
+[core]
+	excludesfile = ~/.gitignore_global
 [diff]
   tool = vimdiff
 [format]
   pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
-[core]
-	excludesfile = ~/.gitignore_global
+[push]
+	default = simple
