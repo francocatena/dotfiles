@@ -12,10 +12,10 @@
 [color]
   ui = auto
 [core]
-	excludesfile = ~/.gitignore_global
+  excludesfile = ~/.gitignore_global
 [diff]
   tool = vimdiff
 [format]
   pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
 [push]
-	default = simple
+  default = simple
