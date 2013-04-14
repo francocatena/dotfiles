@@ -9,16 +9,6 @@ ZSH_THEME="philips"
 
 # Aliases
 alias zshconfig="vim ~/.zshrc"
-alias vimrc="vim ~/.vimrc"
-alias dotfiles_update="cd ~/.dotfiles; rake update; cd -"
-alias ccopy="xclip -sel clip"
-alias cpaste="xclip -sel clip -o"
-alias s="screen"
-alias sr="screen -r"
-alias r="rails"
-alias rs="rails s"
-alias rc="rails c"
-alias rg="rails g"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
