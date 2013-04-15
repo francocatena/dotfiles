@@ -76,7 +76,7 @@ set pastetoggle=<C-p>
 if exists('+undofile') && exists('+undodir')
   set undofile
   set undodir=~/.vim/undodir
-end
+endif
 
 if exists('+writebackup')
   set nobackup
