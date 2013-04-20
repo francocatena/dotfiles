@@ -122,6 +122,13 @@ nnoremap <Leader>b <C-^>
 " Insert before cursor
 nnoremap _i hi
 
+" Switch background
+nnoremap _bl :set background=light<CR>
+nnoremap _bd :set background=dark<CR>
+
+" Switch colorscheme
+nnoremap _c :colorscheme 
+
 " Smart way to move between windows
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
