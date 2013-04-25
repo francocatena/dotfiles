@@ -3,9 +3,6 @@ c() { cd ~/git/$1; }
 _c() { _files -W ~/git -/; }
 compdef _c c
 
-# Autocorrect is more annoying than helpful
-unsetopt correct
-
 # Aliases
 alias ccopy="xclip -sel clip"
 alias cpaste="xclip -sel clip -o"
