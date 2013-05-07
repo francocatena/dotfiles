@@ -20,3 +20,6 @@ zstyle ':completion:*' special-dirs true
 # Fix reverse search in tmux
 bindkey "${terminfo[kcuu1]}" up-line-or-search
 bindkey "${terminfo[kcud1]}" down-line-or-search
+
+# Load zmv
+autoload -U zmv
