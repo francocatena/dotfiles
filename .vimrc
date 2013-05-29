@@ -69,6 +69,7 @@ set hlsearch
 set incsearch
 set showmatch
 set hidden
+set ttyfast
 set history=10000
 set pastetoggle=<C-p>
 
