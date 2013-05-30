@@ -47,7 +47,7 @@ set background=dark
 colorscheme solarized
 
 set ruler
-set number
+set relativenumber
 set cursorline
 
 " Tab-completion in command-line mode
@@ -115,7 +115,7 @@ nnoremap <Leader>a :wa<CR>
 nnoremap <Leader>o :only<CR>
 
 " Aesthetic and navigation
-nnoremap <Leader>n :set number!<CR>
+nnoremap <Leader>n :set relativenumber!<CR>
 nnoremap <Leader><Leader> :nohlsearch<CR>
 nnoremap <Leader><CR> o<Esc>
 nnoremap <Leader>b <C-^>
