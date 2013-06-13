@@ -140,6 +140,11 @@ nnoremap <Leader><Bar> :vsplit<CR><C-w>l
 " Resize windows
 nnoremap <C-_> <C-w>_
 
+" Tab shortcuts
+nnoremap <C-t> :tabnew<CR>
+nnoremap <S-h> gT
+nnoremap <S-l> gt
+
 " Shortcuts for opening file in same directory as current file
 cnoremap <expr> %%  getcmdtype() == ':' ? escape(expand('%:h'), ' \').'/' : '%%'
 
