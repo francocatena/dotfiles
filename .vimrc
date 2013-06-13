@@ -120,9 +120,6 @@ nnoremap <Leader><Leader> :nohlsearch<CR>
 nnoremap <Leader><CR> o<Esc>
 nnoremap <Leader>b <C-^>
 
-" Insert before cursor
-nnoremap _i hi
-
 " Switch background
 nnoremap _bl :set background=light<CR>
 nnoremap _bd :set background=dark<CR>
@@ -135,6 +132,10 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
+
+" Split windows
+nnoremap <Leader>- :split<CR><C-w>j
+nnoremap <Leader><Bar> :vsplit<CR><C-w>l
 
 " Resize windows
 nnoremap <C-_> <C-w>_
