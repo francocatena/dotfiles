@@ -174,7 +174,6 @@ nnoremap <Leader>gd :Gdiff<CR>
 nnoremap <Leader>gc :Gcommit<CR>
 nnoremap <Leader>gb :Gblame<CR>
 nnoremap <Leader>gl :Glog<CR>
-nnoremap <Leader>i :Rintegrationtest 
 
 " Invisibles characters setup
 nmap <Leader>l :set list!<CR>
