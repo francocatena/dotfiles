@@ -1,6 +1,11 @@
 # Franco Catena Dot Files
 
-These are config files to set up a system the way I like it =)
+These are configuration files to set up a system the way I like it =)
+
+## Some assumptions
+
+- You have a relatively up to date Ruby version (>= 1.9)
+- You have installed zsh, tmux and git (sudo apt-get install zsh tmux git-core)
 
 ## Installation
 
@@ -14,4 +19,4 @@ git submodule update
 rake install
 ```
 
-After installing, open a new terminal window to see the effects.
+After installing, open a new terminal window to see the effects (in some cases you must close all of your active sessions).
