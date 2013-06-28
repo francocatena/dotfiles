@@ -19,3 +19,6 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$HOME/.rbenv/bin:$PATH"
 [ ! -f "$HOME/.rbenv/bin/rbenv" ] || eval "$(rbenv init -)"
 
+# Path to search for autoloadable functions
+fpath=($HOME/.zsh/func $fpath)
+typeset -U fpath
