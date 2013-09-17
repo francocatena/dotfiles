@@ -7,7 +7,6 @@ compdef _c c
 alias ccopy="xclip -sel clip"
 alias cpaste="xclip -sel clip -o"
 alias dotfiles_update="cd ~/.dotfiles; rake update; cd -"
-alias git='LANG=en_US.UTF-8 git'
 alias r="rails"
 alias rs="rails s"
 alias rc="rails c"
