@@ -175,6 +175,9 @@ nnoremap <Leader>gc :Gcommit<CR>
 nnoremap <Leader>gb :Gblame<CR>
 nnoremap <Leader>gl :Glog<CR>
 
+" CTags shorcuts
+nnoremap <Right> <C-]>
+
 " Invisibles characters setup
 nmap <Leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
