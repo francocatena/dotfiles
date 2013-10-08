@@ -8,9 +8,6 @@ alias ccopy="xclip -sel clip"
 alias cpaste="xclip -sel clip -o"
 alias dotfiles_update="cd ~/.dotfiles; rake update; cd -"
 alias r="rails"
-alias rs="rails s"
-alias rc="rails c"
-alias rg="rails g"
 alias vimrc="vim ~/.vimrc"
 
 # Added slash when changing dirs

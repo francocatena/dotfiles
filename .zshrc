@@ -11,7 +11,7 @@ ZSH_TMUX_AUTOSTART="true"
 # Aliases
 alias zshconfig="vim ~/.zshrc"
 
-plugins=(bundler gem git tmux fcatena)
+plugins=(bundler gem git tmux rails4 fcatena)
 
 source $ZSH/oh-my-zsh.sh
 
