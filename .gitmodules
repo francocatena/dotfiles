@@ -79,3 +79,6 @@
 [submodule ".vim/bundle/vim-tags"]
 	path = .vim/bundle/vim-tags
 	url = https://github.com/szw/vim-tags.git
+[submodule ".vim/bundle/puppet-syntax-vim"]
+	path = .vim/bundle/puppet-syntax-vim
+	url = https://github.com/puppetlabs/puppet-syntax-vim
