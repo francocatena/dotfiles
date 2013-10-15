@@ -9,6 +9,7 @@ alias cpaste="xclip -sel clip -o"
 alias dotfiles_update="cd ~/.dotfiles; rake update; cd -"
 alias r="rails"
 alias vimrc="vim ~/.vimrc"
+alias zshconfig="vim ~/.zshrc"
 
 # Added slash when changing dirs
 zstyle ':completion:*' special-dirs true
