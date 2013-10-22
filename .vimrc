@@ -50,6 +50,9 @@ set ruler
 set relativenumber
 set cursorline
 
+" Do not show splash screen
+set shortmess+=I
+
 " Tab-completion in command-line mode
 set wildmode=full
 set wildmenu
