@@ -9,7 +9,7 @@ COMPLETION_WAITING_DOTS="true"
 ZSH_TMUX_AUTOSTART="true"
 
 # Oh My ZSH plugins
-plugins=(bundler gem git tmux rails4 fcatena)
+plugins=(bundler gem git rails4 tmux vagrant fcatena)
 
 source $ZSH/oh-my-zsh.sh
 
