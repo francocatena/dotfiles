@@ -93,6 +93,10 @@ set ignorecase smartcase
 
 set showcmd
 
+" Highlight trailing whitespace
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+
 " Status line
 set showtabline=2
 set laststatus=2
