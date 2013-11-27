@@ -114,6 +114,10 @@ map <Right> <Nop>
 map <Up> <Nop>
 map <Down> <Nop>
 
+" Emacs-like beginning and end of line.
+imap <c-e> <c-o>$
+imap <c-a> <c-o>^
+
 " Quit, save and _only_ shortcuts
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
