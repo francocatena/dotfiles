@@ -20,3 +20,7 @@ bindkey "${terminfo[kcud1]}" down-line-or-search
 
 # Load zmv
 autoload -U zmv
+
+# Disable flow control commands (keeps C-s from freezing everything)
+stty start undef
+stty stop undef
