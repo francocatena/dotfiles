@@ -115,6 +115,9 @@ map <Right> <Nop>
 map <Up> <Nop>
 map <Down> <Nop>
 
+" Disable K looking stuff up
+map K <Nop>
+
 " Emacs-like beginning and end of line.
 imap <c-e> <c-o>$
 imap <c-a> <c-o>^
