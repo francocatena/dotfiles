@@ -9,7 +9,7 @@ COMPLETION_WAITING_DOTS="true"
 ZSH_TMUX_AUTOSTART="true"
 
 # Oh My ZSH plugins
-plugins=(bundler gem git rails4 tmux vagrant fcatena)
+plugins=(bundler gem git rails tmux vagrant fcatena)
 
 # Set default locales
 export LC_ALL=es_AR.UTF-8
