@@ -1,7 +1,6 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 DISABLE_AUTO_UPDATE="true"
-DISABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 
 # Automatically start tmux
