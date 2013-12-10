@@ -4,7 +4,7 @@ desc "install the dot files into user's home directory"
 task :install do
   install_oh_my_zsh
   switch_to_zsh
-  
+
   puts %x{git submodule foreach git checkout master}
 
   copy_files
@@ -29,7 +29,7 @@ private
 
 def copy_files
   replace_all = false
-  
+
   files = Dir['.*'] - %w[. .. .git .gitignore .gitmodules .oh-my-zsh]
 
   files << '.oh-my-zsh/custom/plugins/fcatena'
