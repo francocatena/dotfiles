@@ -8,7 +8,7 @@ alias ccopy="xclip -sel clip"
 alias cpaste="xclip -sel clip -o"
 alias dotfiles_update="cd ~/.dotfiles; rake update; cd -"
 alias r="rails"
-alias vimrc="vim ~/.vimrc"
+alias vimconfig="vim ~/.vimrc"
 alias zshconfig="vim ~/.zshrc"
 
 # Added slash when changing dirs
@@ -24,3 +24,6 @@ autoload -U zmv
 # Disable flow control commands (keeps C-s from freezing everything)
 stty start undef
 stty stop undef
+
+# Add solarized dircolors
+eval `dircolors $HOME/.terminal/dircolors-solarized/dircolors.256dark`
