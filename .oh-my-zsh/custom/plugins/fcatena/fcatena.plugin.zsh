@@ -4,12 +4,21 @@ _c() { _files -W ~/git -/; }
 compdef _c c
 
 # Aliases
-alias ccopy="xclip -sel clip"
-alias cpaste="xclip -sel clip -o"
-alias dotfiles_update="cd ~/.dotfiles; rake update; cd -"
-alias r="rails"
-alias vimconfig="vim ~/.vimrc"
-alias zshconfig="vim ~/.zshrc"
+alias dotfiles_update='cd ~/.dotfiles; rake update; cd -'
+alias r='rails'
+alias vimconfig='vim ~/.vimrc'
+alias zshconfig='vim ~/.zshrc'
+
+# OS specific aliases
+if [[ $(uname) == 'Linux' ]] ; then
+  alias ccopy='xclip -sel clip'
+  alias cpaste='xclip -sel clip -o'
+elif [[ $(uname) == 'Darwin' ]]; then
+  alias ccopy='pbcopy'
+  alias cpaste='pbpaste'
+  alias ls='gls --color=auto'
+  alias dircolors='gdircolors'
+fi
 
 # Added slash when changing dirs
 zstyle ':completion:*' special-dirs true
