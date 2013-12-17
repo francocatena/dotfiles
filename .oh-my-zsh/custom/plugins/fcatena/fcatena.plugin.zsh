@@ -9,11 +9,14 @@ alias r='rails'
 alias vimconfig='vim ~/.vimrc'
 alias zshconfig='vim ~/.zshrc'
 
-# OS specific aliases
+# OS specific stuff
 if [[ $(uname) == 'Linux' ]] ; then
   alias ccopy='xclip -sel clip'
   alias cpaste='xclip -sel clip -o'
 elif [[ $(uname) == 'Darwin' ]]; then
+  export LC_ALL=es_AR.UTF-8
+  export LANG=es_AR.UTF-8
+
   alias ccopy='pbcopy'
   alias cpaste='pbpaste'
   alias ls='gls --color=auto'

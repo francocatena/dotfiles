@@ -10,9 +10,5 @@ ZSH_TMUX_AUTOSTART="true"
 # Oh My ZSH plugins
 plugins=(rbenv bundler gem git rails tmux vagrant fcatena)
 
-# Set default locales
-export LC_ALL=es_AR.UTF-8
-export LANG=es_AR.UTF-8
-
 # Load Oh My ZSH
 source $ZSH/oh-my-zsh.sh
