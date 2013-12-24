@@ -49,8 +49,11 @@ set background=dark
 colorscheme solarized
 
 set ruler
-set relativenumber
 set cursorline
+
+if exists('+relativenumber')
+  set relativenumber
+end
 
 " Do not show splash screen
 set shortmess+=I
