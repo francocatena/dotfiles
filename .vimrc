@@ -40,10 +40,6 @@ if has('spell')
   nnoremap _s :set spell!<CR>
 endif
 
-if !exists('g:fugitive_git_executable')
-  let g:fugitive_git_executable='LC_ALL=en_US git'
-endif
-
 set t_Co=256
 set background=dark
 colorscheme solarized
