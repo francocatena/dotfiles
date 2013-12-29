@@ -18,8 +18,6 @@ if has('autocmd')
       \ if line("'\"") > 0 && line("'\"") <= line("$") |
       \   exe "normal g`\"" |
       \ endif
-
-    autocmd! BufRead,BufNewFile *.cap setfiletype ruby
   augroup END
 endif
 
