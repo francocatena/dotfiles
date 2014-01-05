@@ -3,6 +3,9 @@ c() { cd ~/git/$1; }
 _c() { _files -W ~/git -/; }
 compdef _c c
 
+# Move a file to a .bak
+bak() { mv $1 $1.bak; }
+
 # Aliases
 alias dfu='cd ~/.dotfiles; rake update; cd -'
 alias lh='ls -lh'
