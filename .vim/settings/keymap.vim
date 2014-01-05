@@ -60,6 +60,5 @@ map <F4> :cnext<CR>
 " Toggle tmux status bar
 nnoremap _ts :silent !tmux set status<CR>
 
-if has('spell')
-  nnoremap _s :set spell!<CR>
-endif
+" Check spelling
+nnoremap _s :set spell!<CR>
