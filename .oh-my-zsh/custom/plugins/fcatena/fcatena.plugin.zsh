@@ -4,7 +4,8 @@ _c() { _files -W ~/git -/; }
 compdef _c c
 
 # Aliases
-alias dotfiles_update='cd ~/.dotfiles; rake update; cd -'
+alias dfu='cd ~/.dotfiles; rake update; cd -'
+alias lh='ls -lh'
 alias r='rails'
 alias vimconfig='vim ~/.vimrc'
 alias zshconfig='vim ~/.zshrc'
