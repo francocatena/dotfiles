@@ -37,7 +37,7 @@ nnoremap <S-h> gT
 nnoremap <S-l> gt
 
 " Shortcuts for opening file in same directory as current file
-cnoremap <expr> %%  getcmdtype() == ':' ? escape(expand('%:h'), ' \').'/' : '%%'
+cnoremap <expr> %% getcmdtype() == ':' ? escape(expand('%:h'), ' \').'/' : '%%'
 
 map <Leader>ew :edit %%
 map <Leader>es :split %%
