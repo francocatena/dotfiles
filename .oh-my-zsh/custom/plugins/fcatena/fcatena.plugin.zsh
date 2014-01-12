@@ -6,6 +6,9 @@ compdef _c c
 # Move a file to a .bak
 bak() { mv $1 $1.bak; }
 
+# CD and then list
+lcd() { cd $1; ls; }
+
 # Aliases
 alias dfu='cd ~/.dotfiles; rake update; cd -'
 alias lh='ls -lh'
