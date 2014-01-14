@@ -13,6 +13,7 @@ lcd() { cd $1; ls; }
 alias dfu='cd ~/.dotfiles; rake update; cd -'
 alias lh='ls -lh'
 alias r='rails'
+alias rta='rake test:all'
 alias vimconfig='vim ~/.vimrc'
 alias zshconfig='vim ~/.zshrc'
 
