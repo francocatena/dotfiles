@@ -19,7 +19,7 @@ nnoremap <Leader>a :wa<CR>
 nnoremap <Leader>o :only<CR>
 
 " Aesthetic and navigation
-nnoremap <Leader><Leader> :nohlsearch<CR>
+nnoremap <Leader><Space> :nohlsearch<CR>
 nnoremap <Leader><CR> o<Esc>
 nnoremap <Leader>b <C-^>
 
