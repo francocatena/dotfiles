@@ -19,17 +19,9 @@ nnoremap <Leader>a :wa<CR>
 nnoremap <Leader>o :only<CR>
 
 " Aesthetic and navigation
-nnoremap <Leader>n :set relativenumber!<CR>
 nnoremap <Leader><Leader> :nohlsearch<CR>
 nnoremap <Leader><CR> o<Esc>
 nnoremap <Leader>b <C-^>
-
-" Switch background
-nnoremap _bl :set background=light<CR>
-nnoremap _bd :set background=dark<CR>
-
-" Switch colorscheme
-nnoremap _c :colorscheme 
 
 " Tab shortcuts
 nnoremap <C-t> :tabnew<CR>
@@ -47,18 +39,9 @@ map <Leader>et :tabedit %%
 " CTags shorcuts
 nnoremap <Right> <C-]>
 
-" Invisibles characters setup
-nmap <Leader>l :set list!<CR>
-
 " Make Y consistent with C and D.  See :help Y.
 nnoremap Y y$
 
 " Navigate through quickfix
 map <F3> :cprev<CR>
 map <F4> :cnext<CR>
-
-" Toggle tmux status bar
-nnoremap _ts :silent !tmux set status<CR>
-
-" Check spelling
-nnoremap _s :set spell!<CR>

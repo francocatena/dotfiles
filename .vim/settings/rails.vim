@@ -9,5 +9,5 @@ nnoremap <Leader>j :Rjavascript
 nnoremap <Leader>s :Rstylesheet 
 nnoremap <Leader>r :Rake
 nnoremap <Leader>t :Rake<CR>
-nnoremap _a :A<CR>
-nnoremap _r :R<CR>
+nnoremap ca :A<CR>
+nnoremap cr :R<CR>
