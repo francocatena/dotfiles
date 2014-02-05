@@ -1,8 +1,8 @@
 if has('autocmd')
   filetype plugin indent on
-  augroup vimrcEx
+  augroup lastCursorPosition
     autocmd!
-    " Remember last position in file
+    " Remember last cursor position in file
     autocmd BufReadPost *
       \ if line("'\"") > 0 && line("'\"") <= line("$") |
       \   exe "normal g`\"" |
