@@ -36,6 +36,10 @@ set shortmess+=I
 set wildmode=full
 set wildmenu
 
+" No break the lines nor the words
+set wrap
+set linebreak
+
 set nrformats-=octal
 
 set hlsearch

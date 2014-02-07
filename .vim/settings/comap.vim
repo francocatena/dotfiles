@@ -1,5 +1,6 @@
 " Change option key maps
-nnoremap con :set relativenumber!<CR>
+nnoremap cor :set relativenumber!<CR>
+nnoremap con :set number!<CR>
 
 " Switch background
 nnoremap cobl :set background=light<CR>
