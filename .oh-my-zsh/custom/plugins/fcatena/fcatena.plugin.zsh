@@ -38,6 +38,9 @@ zstyle ':completion:*' special-dirs true
 bindkey "${terminfo[kcuu1]}" up-line-or-search
 bindkey "${terminfo[kcud1]}" down-line-or-search
 
+# Use Ctrl-B to clear the screen
+bindkey "" clear-screen
+
 # Load zmv
 autoload -U zmv
 
