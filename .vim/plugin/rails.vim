@@ -7,6 +7,7 @@ nnoremap <Leader>f :Rfunctionaltest
 nnoremap <Leader>i :Rintegrationtest 
 nnoremap <Leader>j :Rjavascript 
 nnoremap <Leader>s :Rstylesheet 
+nnoremap <Leader>l :Rlocale 
 nnoremap <Leader>r :Rake
 nnoremap <Leader>t :Rake<CR>
 nnoremap _a :A<CR>
