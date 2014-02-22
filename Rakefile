@@ -9,21 +9,19 @@ end
 desc 'Update all the _updatable_ things =)'
 task :update do
   git_repos.each { |repo| update_git_repo repo }
-
   pull_submodules
   update_submodules
-
   copy_files
 end
 
 private
 
   def pull_submodules
-    puts %x{git submodule update --init}
+    puts `git submodule update --init`
   end
 
   def update_submodules
-    puts %x{git submodule foreach "git pull origin master"}
+    puts `git submodule foreach "git pull origin master"`
   end
 
   def git_repos
@@ -38,12 +36,11 @@ private
 
   def update_git_repo repo
     puts "Updating #{repo}..."
-    puts %x{cd $HOME/#{repo}; git pull; cd $OLDPWD} if dir_in_home? repo, '.git'
+    puts `cd $HOME/#{repo}; git pull; cd $OLDPWD` if dir_in_home? repo, '.git'
   end
 
   def files
     files = Dir['.*'] - %w[. .. .git .gitignore .gitmodules .oh-my-zsh]
-
     files << '.oh-my-zsh/custom/plugins/fcatena'
   end
 
@@ -51,7 +48,7 @@ private
     replace_all = false
 
     files.each do |file|
-      puts %x{mkdir -p "$HOME/#{File.dirname file}"} if file =~ /\//
+      puts `mkdir -p "$HOME/#{File.dirname file}"` if file =~ /\//
 
       if exists_in_home? file
         if File.identical? file, path_in_home(file)
@@ -96,14 +93,14 @@ private
   end
 
   def replace_file file
-    puts %x{rm -rf "$HOME/#{file}"}
+    puts `rm -rf "$HOME/#{file}"`
 
     link_file file
   end
 
   def link_file file
     puts "linking ~/#{file}"
-    puts %x{ln -s "$PWD/#{file}" "$HOME/#{file}"}
+    puts `ln -s "$PWD/#{file}" "$HOME/#{file}"`
   end
 
   def switch_to_zsh
@@ -114,7 +111,7 @@ private
       case ask_user_input
       when 'y'
         puts 'switching to zsh'
-        puts %x{chsh -s `which zsh`}
+        puts `chsh -s $(which zsh)`
       when 'q'
         exit
       else
@@ -132,7 +129,7 @@ private
       when 'y'
         puts 'installing oh-my-zsh'
 
-        puts %x{git clone https://github.com/robbyrussell/oh-my-zsh.git "$HOME/.oh-my-zsh"}
+        puts `git clone https://github.com/robbyrussell/oh-my-zsh.git "$HOME/.oh-my-zsh"`
       when 'q'
         exit
       else
