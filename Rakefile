@@ -8,14 +8,10 @@ end
 
 desc 'Update all the _updatable_ things =)'
 task :update do
-  update_git_repo '.dotfiles'
+  git_repos.each { |repo| update_git_repo repo }
 
   pull_submodules
   update_submodules
-
-  git_repos.each do |repo|
-    update_git_repo repo
-  end
 
   copy_files
 end
@@ -32,6 +28,7 @@ private
 
   def git_repos
     [
+      '.dotfiles',
       '.oh-my-zsh',
       '.rbenv',
       '.rbenv/plugins/rbenv-gem-rehash',
