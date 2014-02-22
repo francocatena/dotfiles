@@ -10,13 +10,13 @@ end
 
 desc 'Update all the _updatable_ things =)'
 task :update do
-  puts %x{git pull}
+  update_git_repo '.dotfiles'
 
   pull_submodules
   update_submodules
 
   git_repos.each do |repo|
-    puts %x{cd $HOME/#{repo}; git pull; cd -} if File.directory?(file_in_home(repo, '.git'))
+    update_git_repo repo
   end
 
   copy_files
@@ -33,7 +33,17 @@ private
   end
 
   def git_repos
-    ['.rbenv', '.rbenv/plugins/ruby-build', '.oh-my-zsh']
+    [
+      '.oh-my-zsh',
+      '.rbenv',
+      '.rbenv/plugins/rbenv-gem-rehash',
+      '.rbenv/plugins/ruby-build'
+    ]
+  end
+
+  def update_git_repo repo
+    puts "Updating #{repo}..."
+    puts %x{cd $HOME/#{repo}; git pull; cd $OLDPWD} if dir_in_home? repo, '.git'
   end
 
   def files
@@ -48,8 +58,8 @@ private
     files.each do |file|
       puts %x{mkdir -p "$HOME/#{File.dirname file}"} if file =~ /\//
 
-      if File.exist? file_in_home(file)
-        if File.identical? file, file_in_home(file)
+      if exists_in_home? file
+        if File.identical? file, path_in_home(file)
           puts "identical ~/#{file}"
         elsif replace_all
           replace_file file
@@ -78,8 +88,16 @@ private
     $stdin.gets.chomp.downcase
   end
 
-  def file_in_home *args
+  def path_in_home *args
     File.join ENV['HOME'], *args
+  end
+
+  def exists_in_home? *args
+    File.exists? path_in_home(*args)
+  end
+
+  def dir_in_home? *args
+    File.directory? path_in_home(*args)
   end
 
   def replace_file file
@@ -111,7 +129,7 @@ private
   end
 
   def install_oh_my_zsh
-    if File.exist? file_in_home('.oh-my-zsh')
+    if exists_in_home? '.oh-my-zsh'
       puts 'found ~/.oh-my-zsh'
     else
       print 'install oh-my-zsh? [yNq] '
