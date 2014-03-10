@@ -17,3 +17,5 @@ let mapleader=','
 set timeout
 set timeoutlen=1000
 set ttimeoutlen=100
+
+runtime! settings/*
