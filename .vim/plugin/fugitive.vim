@@ -1,5 +1,5 @@
-nnoremap gts :Gstatus<CR>
-nnoremap gtd :Gdiff<CR>
-nnoremap gtc :Gcommit<CR>
-nnoremap gtb :Gblame<CR>
-nnoremap gtl :Glog<CR>
+nnoremap dgs :Gstatus<CR>
+nnoremap dgd :Gdiff<CR>
+nnoremap dgc :Gcommit<CR>
+nnoremap dgb :Gblame<CR>
+nnoremap dgl :Glog<CR>
