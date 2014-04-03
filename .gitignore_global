@@ -26,8 +26,8 @@
 
 # Editor temporal files #
 #########################
-[._]*.s[a-w][a-z]
-[._]s[a-w][a-z]
+*.*.s[a-w][a-z]
+*.s[a-w][a-z]
 *~
 
 # Vagrant files #
