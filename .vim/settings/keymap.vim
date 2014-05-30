@@ -49,3 +49,6 @@ map <F4> :cnext<CR>
 " Dispatch map
 nnoremap d<CR> :Dispatch<CR>
 nnoremap <F10> :Copen!<CR>
+
+" Make backspace behave like minus
+nnoremap <Backspace> -
