@@ -47,5 +47,5 @@ map <F3> :cprev<CR>
 map <F4> :cnext<CR>
 
 " Dispatch map
-nnoremap <F9> :Dispatch<CR>
+nnoremap d<CR> :Dispatch<CR>
 nnoremap <F10> :Copen!<CR>
