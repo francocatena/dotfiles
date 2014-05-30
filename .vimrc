@@ -12,7 +12,7 @@ set pastetoggle=<C-p>
 
 set ignorecase smartcase
 
-let mapleader=','
+let mapleader=' '
 
 set timeout
 set timeoutlen=1000
