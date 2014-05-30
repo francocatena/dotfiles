@@ -9,5 +9,5 @@ nnoremap <Leader>j :Ejavascript
 nnoremap <Leader>s :Estylesheet 
 nnoremap <Leader>l :Elocale 
 nnoremap <Leader>r :Rake
-nnoremap _a :A<CR>
-nnoremap _r :R<CR>
+nnoremap da :A<CR>
+nnoremap dr :R<CR>
