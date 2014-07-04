@@ -4,7 +4,7 @@ nnoremap <Leader>v :Eview
 nnoremap <Leader>h :Ehelper 
 nnoremap <Leader>u :Eunittest 
 nnoremap <Leader>f :Efunctionaltest 
-nnoremap <Leader>i :Eintegrationtest 
+nnoremap <Leader>i :Einitializer 
 nnoremap <Leader>j :Ejavascript 
 nnoremap <Leader>s :Estylesheet 
 nnoremap <Leader>l :Elocale 
