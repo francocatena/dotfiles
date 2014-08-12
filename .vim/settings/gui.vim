@@ -58,6 +58,5 @@ match ExtraWhitespace /\s\+$/
 " Status line
 set showtabline=2
 set laststatus=2
-set statusline=[%n]\ %<%.99f\ %h%w%m%r%{exists('*fugitive#statusline')?fugitive#statusline():''}%y%=%-16(\ %l,%c-%v\ %)%P
 
 set listchars=tab:▸\ ,eol:¬
