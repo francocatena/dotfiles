@@ -39,6 +39,6 @@ endfunction
 
 function! FilenameStatus()
   return ('' != ReadonlyStatus() ? ReadonlyStatus() . ' ' : '') .
-       \ ('' != expand('%:t') ? expand('%:t') : '[No Name]') .
+       \ ('' != expand('%:P') ? expand('%:P') : '[No Name]') .
        \ ('' != ModifiedStatus() ? ' ' . ModifiedStatus() : '')
 endfunction
