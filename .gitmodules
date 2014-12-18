@@ -83,8 +83,8 @@
 	path = .vim/bundle/vim-vinegar
 	url = https://github.com/tpope/vim-vinegar.git
 [submodule ".vim/bundle/vim-commentary"]
-  path = .vim/bundle/vim-commentary
-  url = https://github.com/tpope/vim-commentary.git
+	path = .vim/bundle/vim-commentary
+	url = https://github.com/tpope/vim-commentary.git
 [submodule ".vim/bundle/splitjoin.vim"]
 	path = .vim/bundle/splitjoin.vim
 	url = https://github.com/AndrewRadev/splitjoin.vim
