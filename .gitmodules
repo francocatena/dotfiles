@@ -115,3 +115,6 @@
 [submodule ".vim/bundle/lightline.vim"]
 	path = .vim/bundle/lightline.vim
 	url = https://github.com/itchyny/lightline.vim
+[submodule ".vim/bundle/vim-haystack"]
+	path = .vim/bundle/vim-haystack
+	url = https://github.com/tpope/vim-haystack
