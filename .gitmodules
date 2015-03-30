@@ -118,3 +118,6 @@
 [submodule ".vim/bundle/vim-haystack"]
 	path = .vim/bundle/vim-haystack
 	url = https://github.com/tpope/vim-haystack
+[submodule ".vim/bundle/mustache"]
+	path = .vim/bundle/mustache
+	url = https://github.com/mustache/vim-mustache-handlebars
