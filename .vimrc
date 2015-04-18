@@ -5,8 +5,6 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 call pathogen#helptags()
 
-set autoread
-
 set history=10000
 set pastetoggle=<C-p>
 

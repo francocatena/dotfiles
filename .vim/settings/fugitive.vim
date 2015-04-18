@@ -3,3 +3,6 @@ nnoremap dgd :Gdiff<CR>
 nnoremap dgc :Gcommit<CR>
 nnoremap dgb :Gblame<CR>
 nnoremap dgl :Glog<CR>
+nnoremap dgl :Glog<CR>
+
+nnoremap dgp :Dispatch git push<CR>
