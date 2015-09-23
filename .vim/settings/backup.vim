@@ -3,4 +3,4 @@ if exists('+writebackup')
   set writebackup
 endif
 
-set directory=~/.vim/backup
+set directory=~/.vim/backup//
