@@ -28,6 +28,7 @@ if [[ $(uname) == 'Linux' ]] ; then
 elif [[ $(uname) == 'Darwin' ]]; then
   export LC_ALL=es_AR.UTF-8
   export LANG=es_AR.UTF-8
+  export PATH="/usr/local/bin:$PATH"
 
   alias ccopy='pbcopy'
   alias cpaste='pbpaste'
