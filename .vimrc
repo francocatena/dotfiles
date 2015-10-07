@@ -16,4 +16,6 @@ set timeout
 set timeoutlen=1000
 set ttimeoutlen=100
 
+set backspace=indent,eol,start
+
 runtime! settings/*
