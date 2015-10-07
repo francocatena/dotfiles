@@ -8,7 +8,7 @@ COMPLETION_WAITING_DOTS='true'
 ZSH_TMUX_AUTOSTART='true'
 
 # Oh My ZSH plugins
-plugins=(rbenv archlinux aws brew bundler gem git meteor npm rails tmux vagrant fcatena)
+plugins=(fcatena rbenv archlinux aws brew bundler gem git meteor npm rails tmux vagrant)
 
 # Load Oh My ZSH
 source $ZSH/oh-my-zsh.sh
