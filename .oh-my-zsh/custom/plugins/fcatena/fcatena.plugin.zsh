@@ -10,7 +10,7 @@ bak() { mv $1 $1.bak; }
 lcd() { cd $1; ls; }
 
 # Aliases
-alias dfu='cd ~/.dotfiles; rake update; cd -'
+alias dfu='cd ~/.dotfiles && rake update && cd -'
 alias lh='ls -lh'
 alias r='rails'
 alias rta='rake test:all'
@@ -20,6 +20,7 @@ alias rti='rake test:integration'
 alias tmuxconfig='vim ~/.tmux.conf'
 alias vimconfig='vim ~/.vimrc'
 alias zshconfig='vim ~/.zshrc'
+alias npm-exec='PATH=$(npm bin):$PATH'
 
 # OS specific stuff
 if [[ $(uname) == 'Linux' ]] ; then
