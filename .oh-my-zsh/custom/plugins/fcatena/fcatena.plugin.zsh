@@ -24,6 +24,8 @@ alias npm-exec='PATH=$(npm bin):$PATH'
 
 # OS specific stuff
 if [[ $(uname) == 'Linux' ]] ; then
+  export EDITOR='vim'
+
   alias ccopy='xclip -sel clip'
   alias cpaste='xclip -sel clip -o'
 elif [[ $(uname) == 'Darwin' ]]; then
