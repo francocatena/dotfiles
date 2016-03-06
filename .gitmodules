@@ -127,3 +127,6 @@
 [submodule ".vim/bundle/vim-javascript"]
 	path = .vim/bundle/vim-javascript
 	url = https://github.com/pangloss/vim-javascript
+[submodule ".vim/bundle/vim-phoenix"]
+	path = .vim/bundle/vim-phoenix
+	url = https://github.com/avdgaag/vim-phoenix
