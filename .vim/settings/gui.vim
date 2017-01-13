@@ -25,8 +25,9 @@ colorscheme solarized
 set ruler
 set cursorline
 
-if exists('+relativenumber')
+if exists('+relativenumber') && exists('+number')
   set relativenumber
+  set number
 end
 
 " Do not show splash screen
