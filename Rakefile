@@ -42,7 +42,7 @@ private
   def files
     files = Dir['.*'] - %w[. .. .git .gitignore .gitmodules .oh-my-zsh]
 
-    files << '.oh-my-zsh/custom/plugins/fcatena'
+    files + Dir['.oh-my-zsh/custom/plugins/*']
   end
 
   def copy_files
