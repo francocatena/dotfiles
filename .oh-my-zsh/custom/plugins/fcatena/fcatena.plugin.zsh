@@ -12,6 +12,7 @@ lcd() { cd $1; ls; }
 # Aliases
 alias dfu='cd ~/.dotfiles && rake update && cd -'
 alias lh='ls -lh'
+alias knife='chef exec knife'
 alias r='rails'
 alias rta='rake test:all'
 alias rtu='rake test:units'
