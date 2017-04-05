@@ -1,3 +1,14 @@
 if exists('+wildignore')
-  set wildignore+=bin/**,log/**,private/**,tmp/**,uploads/**,*.gif,*.ico,*.jpg,*.png
+  set wildignore+=
+        \bin/**,
+        \dist/**,
+        \log/**,
+        \node_modules/**,
+        \private/**,
+        \tmp/**,
+        \uploads/**,
+        \*.gif,
+        \*.ico,
+        \*.jpg,
+        \*.png
 endif
