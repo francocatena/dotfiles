@@ -18,8 +18,8 @@
 [format]
   pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
 [github]
-	user = francocatena
+  user = francocatena
 [push]
   default = simple
 [commit]
-	gpgsign = true
+  gpgsign = true
