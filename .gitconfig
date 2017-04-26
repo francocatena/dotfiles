@@ -21,3 +21,5 @@
 	user = francocatena
 [push]
   default = simple
+[commit]
+	gpgsign = true
