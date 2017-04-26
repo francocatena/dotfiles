@@ -29,7 +29,6 @@ private
       '.dotfiles',
       '.oh-my-zsh',
       '.rbenv',
-      '.rbenv/plugins/rbenv-gem-rehash',
       '.rbenv/plugins/ruby-build'
     ]
   end
