@@ -1,10 +1,5 @@
 set nocompatible
 
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-
-call pathogen#infect()
-call pathogen#helptags()
-
 set history=10000
 set pastetoggle=<C-p>
 
