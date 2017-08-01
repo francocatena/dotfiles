@@ -10,4 +10,6 @@ ZSH_TMUX_AUTOSTART='true'
 
 plugins=(fcatena rbenv archlinux aws az brew bundler docker gem git knife meteor mix npm rails tmux vagrant)
 
+export ERL_AFLAGS="-kernel shell_history enabled"
+
 source $ZSH/oh-my-zsh.sh
