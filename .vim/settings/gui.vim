@@ -41,6 +41,8 @@ set wildmenu
 set wrap
 set linebreak
 
+set nrformats-=octal
+
 set hlsearch
 set incsearch
 set showmatch
