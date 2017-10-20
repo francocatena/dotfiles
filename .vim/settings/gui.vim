@@ -20,7 +20,7 @@ endif
 
 set t_Co=256
 set background=dark
-colorscheme solarized
+silent! colorscheme solarized
 
 set ruler
 set cursorline
