@@ -8,6 +8,6 @@ UNBUNDLED_COMMANDS=(knife)
 [[ `tput colors` == '256' ]] || TERM=screen-256color
 ZSH_TMUX_AUTOSTART='true'
 
-plugins=(fcatena rbenv archlinux aws az brew bundler docker gem git knife meteor mix npm rails tmux vagrant)
+plugins=(fcatena rbenv archlinux aws az brew bundler docker gem git knife meteor mix npm rails tmux vagrant yarn)
 
 source $ZSH/oh-my-zsh.sh

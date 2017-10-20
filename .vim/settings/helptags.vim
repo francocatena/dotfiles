@@ -37,6 +37,6 @@ function! helptags#helptags() abort
   endfor
 endfunction
 
-if has("autocmd")
+if has('autocmd')
   autocmd VimEnter * call helptags#helptags()
 endif
