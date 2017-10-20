@@ -1,5 +1,7 @@
 set nocompatible
 
+source ~/.vim/packages.vim
+
 set history=10000
 set pastetoggle=<C-p>
 

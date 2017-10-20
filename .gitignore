@@ -1,3 +1,4 @@
+.vim/pack/minpac/start/
 .vim/undodir/*
 !.vim/undodir/.gitkeep
 .vim/.netrwhist
