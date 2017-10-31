@@ -5,18 +5,18 @@ These are configuration files to set up a system the way I like it =)
 ## Some assumptions
 
 - You have a relatively up to date Ruby version (>= 1.9)
-- You have installed **zsh**, **tmux** and **git**
+- You have installed **zsh**, **tmux** and **git** (optionally **xsel**)
 
 In an Archlinux based OS should be
 
 ```console
-$ sudo pacman -S zsh tmux git
+$ sudo pacman -S zsh tmux git xsel
 ```
 
 And in a Debian based OS
 
 ```console
-$ sudo apt-get install zsh tmux git
+$ sudo apt-get install zsh tmux git xsel
 ```
 
 ## Installation
@@ -35,5 +35,3 @@ $ rake install
 
 After installing, open a new terminal window to see the effects
 (in some cases you must close all of your active sessions)
-
-#### Released under the MIT LICENSE

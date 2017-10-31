@@ -26,8 +26,8 @@ alias npm-exec='PATH=$(npm bin):$PATH'
 if [[ $(uname) == 'Linux' ]] ; then
   export EDITOR='vim'
 
-  alias ccopy='xclip -sel clip'
-  alias cpaste='xclip -sel clip -o'
+  alias ccopy='xsel -b'
+  alias cpaste='xsel -b -o'
 elif [[ $(uname) == 'Darwin' ]]; then
   export PATH="/usr/local/bin:$PATH"
 
