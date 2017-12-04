@@ -45,9 +45,13 @@ call minpac#add('tpope/vim-rails')
 call minpac#add('tpope/vim-rake')
 call minpac#add('vim-ruby/vim-ruby')
 
-" JavaScript
+" JavaScript / JSX
 call minpac#add('pangloss/vim-javascript')
+call minpac#add('mxw/vim-jsx')
 
 " Working with GitHubGist
 call minpac#add('mattn/webapi-vim')
 call minpac#add('mattn/gist-vim')
+
+" Pug (Used to follow some tutorials)
+call minpac#add('digitaltoad/vim-pug')
