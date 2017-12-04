@@ -34,6 +34,7 @@ call minpac#add('SirVer/ultisnips')
 call minpac#add('honza/vim-snippets')
 call minpac#add('szw/vim-tags')
 call minpac#add('nelstrom/vim-visual-star-search')
+call minpac#add('machakann/vim-highlightedyank')
 
 " Elixir
 call minpac#add('elixir-editors/vim-elixir')
