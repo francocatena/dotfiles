@@ -14,5 +14,9 @@ if exists('+wildignore')
         \*.gif,
         \*.ico,
         \*.jpg,
-        \*.png
+        \*.png,
+        \*.tar,
+        \*.tar.bz2,
+        \*.tar.gz,
+        \*.tar.xz
 endif
