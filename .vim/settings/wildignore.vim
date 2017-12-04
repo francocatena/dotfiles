@@ -16,7 +16,8 @@ if exists('+wildignore')
         \*.jpg,
         \*.png,
         \*.tar,
-        \*.tar.bz2,
-        \*.tar.gz,
-        \*.tar.xz
+        \*.bz2,
+        \*.gz,
+        \*.xz,
+        \*.zip
 endif
