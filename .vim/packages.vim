@@ -8,7 +8,7 @@ endif
 call minpac#init()
 
 " Minpac managed by minpac =)
-call minpac#add('k-takata/minpac', {'type': 'opt'})
+" call minpac#add('k-takata/minpac', {'type': 'opt'})
 
 " UI
 call minpac#add('itchyny/lightline.vim')
