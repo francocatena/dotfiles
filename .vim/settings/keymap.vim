@@ -8,7 +8,9 @@ map <Down> <Nop>
 map K <Nop>
 
 " To make highlightedyank work
-map y <Plug>(highlightedyank)
+if !exists('##TextYankPost')
+  map y <Plug>(highlightedyank)
+endif
 
 " Emacs-like beginning and end of line.
 imap <c-e> <c-o>$
