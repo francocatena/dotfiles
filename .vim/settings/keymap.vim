@@ -7,11 +7,6 @@ map <Down> <Nop>
 " Disable K looking stuff up
 map K <Nop>
 
-" To make highlightedyank work
-if !exists('##TextYankPost')
-  map y <Plug>(highlightedyank)
-endif
-
 " Emacs-like beginning and end of line.
 imap <c-e> <c-o>$
 imap <c-a> <c-o>^
