@@ -20,11 +20,14 @@ plugins=(
   docker
   gem
   git
+  helm
   knife
+  kubectl
   meteor
   mix
   npm
   rails
+  timer
   tmux
   vagrant
   yarn
