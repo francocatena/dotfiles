@@ -1,5 +1,6 @@
-command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update()
+command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update('', {'do': 'call minpac#status()'})
 command! PackClean  packadd minpac | source $MYVIMRC | call minpac#clean()
+command! PackStatus packadd minpac | source $MYVIMRC | call minpac#status()
 
 if !exists('*minpac#init')
   finish
@@ -39,6 +40,9 @@ call minpac#add('machakann/vim-highlightedyank')
 " Elixir
 call minpac#add('elixir-editors/vim-elixir')
 
+" Elm
+call minpac#add('ElmCast/elm-vim')
+
 " Ruby / Rails
 call minpac#add('tpope/vim-bundler')
 call minpac#add('tpope/vim-rails')
@@ -48,6 +52,9 @@ call minpac#add('vim-ruby/vim-ruby')
 " JavaScript / JSX
 call minpac#add('pangloss/vim-javascript')
 call minpac#add('mxw/vim-jsx')
+
+" Jsonnet
+call minpac#add('google/vim-jsonnet')
 
 " Working with GitHubGist
 call minpac#add('mattn/webapi-vim')
