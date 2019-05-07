@@ -62,3 +62,6 @@ call minpac#add('mattn/gist-vim')
 
 " Pug (Used to follow some tutorials)
 call minpac#add('digitaltoad/vim-pug')
+
+" Terraform
+call minpac#add('hashivim/vim-terraform')
