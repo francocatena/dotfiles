@@ -23,7 +23,6 @@ plugins=(
   helm
   knife
   kubectl
-  meteor
   mix
   npm
   rails
