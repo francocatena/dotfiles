@@ -18,6 +18,7 @@ plugins=(
   aws
   bundler
   docker
+  docker-compose
   gem
   git
   helm
