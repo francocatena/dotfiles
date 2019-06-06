@@ -27,6 +27,7 @@ plugins=(
   mix
   npm
   rails
+  terraform
   timer
   tmux
   vagrant
