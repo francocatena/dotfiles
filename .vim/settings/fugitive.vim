@@ -1,5 +1,3 @@
-let g:fugitive_git_executable = 'LANG=en_US.UTF8 git'
-
 nnoremap dgs :Gstatus<CR>
 nnoremap dgd :Gdiff<CR>
 nnoremap dgc :Gcommit<CR>
