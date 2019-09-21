@@ -6,6 +6,9 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 export PATH="$HOME/.node_modules/bin:$PATH"
 export npm_config_prefix=~/.node_modules
 
+# Gcloud Oh My ZSH plugin
+export CLOUDSDK_HOME=$CLOUDSDK_ROOT_DIR
+
 # K8s config files
 export KUBECONFIG=KUBECONFIG:$HOME/.kube/config:$HOME/.kube/configs/k8s-cirope-kubeconfig.yaml
 

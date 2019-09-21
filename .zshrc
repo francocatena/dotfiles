@@ -19,6 +19,7 @@ plugins=(
   bundler
   docker
   docker-compose
+  gcloud
   gem
   git
   helm
