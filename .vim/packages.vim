@@ -50,9 +50,8 @@ call minpac#add('tpope/vim-rails')
 call minpac#add('tpope/vim-rake')
 call minpac#add('vim-ruby/vim-ruby')
 
-" JavaScript / JSX
+" JavaScript
 call minpac#add('pangloss/vim-javascript')
-call minpac#add('mxw/vim-jsx')
 
 " Jsonnet
 call minpac#add('google/vim-jsonnet')
@@ -60,9 +59,6 @@ call minpac#add('google/vim-jsonnet')
 " Working with GitHubGist
 call minpac#add('mattn/webapi-vim')
 call minpac#add('mattn/gist-vim')
-
-" Pug (Used to follow some tutorials)
-call minpac#add('digitaltoad/vim-pug')
 
 " Terraform
 call minpac#add('hashivim/vim-terraform')
