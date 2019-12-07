@@ -29,6 +29,7 @@ plugins=(
   npm
   rails
   terraform
+  thefuck
   timer
   tmux
   vagrant
