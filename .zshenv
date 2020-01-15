@@ -9,6 +9,9 @@ export npm_config_prefix=~/.node_modules
 # K8s config files
 export KUBECONFIG=KUBECONFIG:$HOME/.kube/config:$HOME/.kube/configs/k8s-cirope-kubeconfig.yaml
 
+# ZSH autosuggestions config
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=10"
+
 # Sensitive variables go here
 if [ -f ~/.env ]; then
   source ~/.env

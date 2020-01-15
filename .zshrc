@@ -34,6 +34,7 @@ plugins=(
   tmux
   vagrant
   yarn
+  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
