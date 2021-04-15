@@ -16,6 +16,7 @@ plugins=(
   rbenv
   archlinux
   aws
+  brew
   bundler
   docker
   docker-compose
@@ -28,6 +29,7 @@ plugins=(
   mix
   npm
   rails
+  ssh-agent
   terraform
   thefuck
   timer
