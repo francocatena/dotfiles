@@ -19,6 +19,8 @@
   pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
 [github]
   user = francocatena
+[pull]
+  rebase = false
 [push]
   default = simple
 [commit]
