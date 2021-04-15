@@ -6,6 +6,7 @@ if exists('+wildignore')
         \log/**,
         \node_modules/**,
         \private/**,
+        \storage/**,
         \tmp/**,
         \uploads/**,
         \_build/**,
