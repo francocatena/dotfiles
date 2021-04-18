@@ -62,6 +62,9 @@ function! PackInit() abort
 
   " Terraform
   call minpac#add('hashivim/vim-terraform')
+
+  " Solidity
+  call minpac#add('thesis/vim-solidity')
 endfunction
 
 command! PackUpdate call PackInit() | call minpac#update()
