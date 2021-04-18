@@ -29,7 +29,7 @@ if [[ $(uname) == 'Linux' ]] ; then
   alias ccopy='xsel -b'
   alias cpaste='xsel -b -o'
 elif [[ $(uname) == 'Darwin' ]]; then
-  export PATH="/usr/local/bin:$PATH"
+  export PATH="/usr/local/bin:/opt/homebrew/opt/openssl@1.1/bin:$PATH"
   export GPG_TTY=$(tty)
 
   alias ccopy='pbcopy'
