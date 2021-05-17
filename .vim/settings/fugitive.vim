@@ -1,4 +1,4 @@
-nnoremap dgs :Gstatus<CR>
+nnoremap dgs :Git<CR>
 nnoremap dgd :Gdiff<CR>
 nnoremap dgc :Gcommit<CR>
 nnoremap dgb :Gblame<CR>

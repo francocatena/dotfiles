@@ -52,6 +52,7 @@ function! PackInit() abort
   " JavaScript
   call minpac#add('pangloss/vim-javascript')
   call minpac#add('maxmellon/vim-jsx-pretty')
+  call minpac#add('cristianoliveira/vim-react-html-snippets')
 
   " Jsonnet
   call minpac#add('google/vim-jsonnet')
