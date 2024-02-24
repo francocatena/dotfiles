@@ -11,6 +11,9 @@ UNBUNDLED_COMMANDS=(knife)
 [[ `tput colors` == '256' ]] || TERM=screen-256color
 ZSH_TMUX_AUTOSTART='true'
 
+# Better Docker completion, remove once in a while to check if it's fixed
+zstyle ':omz:plugins:docker' legacy-completion yes
+
 plugins=(
   fcatena
   rbenv
@@ -20,10 +23,10 @@ plugins=(
   bundler
   docker
   docker-compose
+  dotenv
   gcloud
   gem
   git
-  helm
   knife
   kubectl
   mix
