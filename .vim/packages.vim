@@ -37,6 +37,9 @@ function! PackInit() abort
   call minpac#add('nelstrom/vim-visual-star-search')
   call minpac#add('machakann/vim-highlightedyank')
 
+  " Copilot
+  call minpac#add('github/copilot.vim')
+
   " Elixir
   call minpac#add('elixir-editors/vim-elixir')
 
@@ -54,6 +57,12 @@ function! PackInit() abort
   call minpac#add('maxmellon/vim-jsx-pretty')
   call minpac#add('cristianoliveira/vim-react-html-snippets')
 
+  " Rust
+  call minpac#add('rust-lang/rust.vim')
+
+  " Typescript
+  call minpac#add('leafgarland/typescript-vim')
+
   " Jsonnet
   call minpac#add('google/vim-jsonnet')
 
@@ -66,6 +75,9 @@ function! PackInit() abort
 
   " Solidity
   call minpac#add('thesis/vim-solidity')
+
+  " LSP
+  call minpac#add('dense-analysis/ale')
 endfunction
 
 command! PackUpdate call PackInit() | call minpac#update()
