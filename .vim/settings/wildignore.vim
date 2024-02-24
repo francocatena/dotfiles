@@ -20,5 +20,6 @@ if exists('+wildignore')
         \*.bz2,
         \*.gz,
         \*.xz,
-        \*.zip
+        \*.zip,
+        \*.zst
 endif
