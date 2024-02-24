@@ -85,7 +85,7 @@ private
   end
 
   def exists_in_home? *args
-    File.exists? path_in_home(*args)
+    File.exist? path_in_home(*args)
   end
 
   def dir_in_home? *args
