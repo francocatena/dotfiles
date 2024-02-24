@@ -1,5 +1,7 @@
 set nocompatible
 
+filetype plugin indent on
+
 source ~/.vim/packages.vim
 
 set history=10000
