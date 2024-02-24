@@ -34,7 +34,7 @@ function! ReadonlyStatus()
 endfunction
 
 function! FugitiveStatus()
-  return exists('*fugitive#head') ? fugitive#head() : ''
+  return exists('*FugitiveHead') ? FugitiveHead() : ''
 endfunction
 
 function! FilenameStatus()

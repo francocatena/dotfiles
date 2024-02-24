@@ -1,7 +1,7 @@
 nnoremap dgs :Git<CR>
 nnoremap dgd :Gdiff<CR>
 nnoremap dgc :Gcommit<CR>
-nnoremap dgb :Gblame<CR>
+nnoremap dgb :Git blame<CR>
 nnoremap dgl :Glog<CR>
 nnoremap dgl :Glog<CR>
 
