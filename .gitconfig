@@ -13,6 +13,7 @@
   ui = auto
 [core]
   excludesfile = ~/.gitignore_global
+  ignorecase = false
 [diff]
   tool = vimdiff
 [format]
@@ -25,3 +26,5 @@
   default = simple
 [commit]
   gpgsign = true
+[init]
+  defaultBranch = master
