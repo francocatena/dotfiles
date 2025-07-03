@@ -34,7 +34,6 @@ plugins=(
   rails
   ssh-agent
   terraform
-  thefuck
   timer
   tmux
   vagrant
