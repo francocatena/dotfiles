@@ -39,7 +39,13 @@ private
   end
 
   def files
-    files = Dir['.*'] - %w[. .. .git .gitignore .gitmodules .oh-my-zsh]
+    # Gather top-level dotfiles and directories, but skip the entire .config directory to avoid
+    # clobbering the user's ~/.config folder. We'll manage specific sub-paths manually.
+    files = Dir['.*'] - %w[. .. .git .gitignore .gitmodules .oh-my-zsh .config]
+
+    # Explicitly track the Alacritty configuration directory so it gets linked into
+    # ~/.config/alacritty while leaving the rest of ~/.config untouched.
+    files << '.config/alacritty'
 
     files + Dir['.oh-my-zsh/custom/plugins/*']
   end
