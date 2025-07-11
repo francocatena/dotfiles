@@ -16,3 +16,6 @@ size = 16
 bindings = [
   { key = "F11", action = "ToggleFullscreen" }
 ]
+
+[window]
+option_as_alt = "Both"
